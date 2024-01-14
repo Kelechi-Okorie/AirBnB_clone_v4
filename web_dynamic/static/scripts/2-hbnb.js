@@ -1,5 +1,15 @@
+const endpointHandler = (data) => {
+    if (data.status === 'OK') {
+        $('#api_status').addClass('available');
+    } else {
+        $('#api_status').removeClass('available');
+    }
+};
+
 const pageHandler = () => {
     const amenityIds = {};
+
+    $.ajax('http://0.0.0.0:5001/api/v1/status').done(endpointHandler)
 
     $('input[type=checkbox]').change(() => {
         if ($(this).prop('checked')) {
