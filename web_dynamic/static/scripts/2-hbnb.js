@@ -9,7 +9,7 @@ const endpointHandler = (data) => {
 const pageHandler = () => {
     const amenityIds = {};
 
-    $.ajax('http://0.0.0.0:5001/api/v1/status').done(endpointHandler)
+    $.ajax('http://54.90.42.30:5001/api/v1/status').done(endpointHandler)
 
     $('input[type=checkbox]').change(() => {
         if ($(this).prop('checked')) {
